@@ -117,7 +117,7 @@ const Sidebar = () => {
               height="32"
               className="rounded-circle me-2 "
             />
-            <strong className="text-white">mdo</strong>
+            <strong className="text-white">Shiv</strong>
           </a>
           <ul
             className="dropdown-menu text-small shadow"

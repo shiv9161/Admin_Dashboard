@@ -4,6 +4,22 @@ import Pagination from "./Pagination";
 
 const TableComponent = () => {
   const [search, setSearch] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 9; // Change this to set the number of items per page
+
+  // Logic to calculate the index range of items to display based on current page
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = data
+    .filter((item) =>
+      search.toLowerCase() === ""
+        ? item
+        : item.teacherName.toLowerCase().includes(search.toLowerCase())
+    )
+    .slice(indexOfFirstItem, indexOfLastItem);
+
+  // Change page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
     <div className="table-responsive">
@@ -49,31 +65,30 @@ const TableComponent = () => {
           </tr>
         </thead>
         <tbody>
-          {data
-            .filter((item) => {
-              return search.toLocaleLowerCase() === ""
-                ? item
-                : item.teacherName.toLocaleLowerCase().includes(search);
-            })
-            .map((item) => (
-              <tr key={item.id}>
-                <td className="pt-3 pb-3">{item.id}</td>
-                <td className="pt-3 pb-3">{item.customerId}</td>
-                <td className="pt-3 pb-3">{item.teacherName}</td>
-                <td className="pt-3 pb-3">{item.department}</td>
-                <td className="pt-3 pb-3">{item.student}</td>
-                <td className="pt-3 pb-3">{item.status}</td>
-                <td>
-                  <a href="/" className="">
-                    View More
-                  </a>
-                </td>
-              </tr>
-            ))}
+          {currentItems.map((item) => (
+            <tr key={item.id}>
+              <td className="pt-3 pb-3">{item.id}</td>
+              <td className="pt-3 pb-3">{item.customerId}</td>
+              <td className="pt-3 pb-3">{item.teacherName}</td>
+              <td className="pt-3 pb-3">{item.department}</td>
+              <td className="pt-3 pb-3">{item.student}</td>
+              <td className="pt-3 pb-3">{item.status}</td>
+              <td>
+                <a href="/" className="">
+                  View More
+                </a>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
       {/* pagination */}
-      <Pagination />
+      <Pagination
+        itemsPerPage={itemsPerPage}
+        totalItems={data.length}
+        paginate={paginate}
+        currentPage={currentPage}
+      />
     </div>
   );
 };

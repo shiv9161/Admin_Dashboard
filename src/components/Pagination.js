@@ -1,33 +1,56 @@
 import React from "react";
 
-const Pagination = () => {
+const Pagination = ({ itemsPerPage, totalItems, paginate, currentPage }) => {
+  const pageNumbers = [];
+
+  for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
+    pageNumbers.push(i);
+  }
+
   return (
     <>
-      <div class="d-flex justify-content-center">
+      <div className="d-flex justify-content-center">
         <nav aria-label="Page navigation example">
-          <ul class="pagination">
-            <li class="page-item">
-              <a class="page-link" href="/" aria-label="Previous">
+          <ul className="pagination">
+            <li className={`page-item ${currentPage === 1 && "disabled"}`}>
+              <a
+                className="page-link"
+                href="/"
+                aria-label="Previous"
+                onClick={() => paginate(currentPage - 1)}
+              >
                 <span aria-hidden="true">&laquo;</span>
               </a>
             </li>
-            <li class="page-item">
-              <a class="page-link" href="/">
-                1
-              </a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="/">
-                2
-              </a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="/">
-                3
-              </a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="/" aria-label="Next">
+            {pageNumbers.map((number) => (
+              <li
+                key={number}
+                className={`page-item ${currentPage === number && "active"}`}
+              >
+                <a
+                  href="/"
+                  className="page-link"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    paginate(number);
+                  }}
+                >
+                  {number}
+                </a>
+              </li>
+            ))}
+            <li
+              className={`page-item ${
+                currentPage === Math.ceil(totalItems / itemsPerPage) &&
+                "disabled"
+              }`}
+            >
+              <a
+                className="page-link"
+                href="/"
+                aria-label="Next"
+                onClick={() => paginate(currentPage + 1)}
+              >
                 <span aria-hidden="true">&raquo;</span>
               </a>
             </li>

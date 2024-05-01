@@ -122,7 +122,7 @@ export const data = [
   {
     id: 16,
     customerId: "C016",
-    teacherName: "Chloe King",
+    teacherName: "Chloe King fgjlfgk;lgh fgk;lf ;fkh;f",
     department: "Statistics",
     student: "Thomas",
     status: "Inactive",

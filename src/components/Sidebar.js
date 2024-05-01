@@ -1,4 +1,6 @@
 import React from "react";
+import { MdDashboard } from "react-icons/md";
+import { IoReorderThreeSharp } from "react-icons/io5";
 
 const Sidebar = () => {
   return (
@@ -15,7 +17,8 @@ const Sidebar = () => {
             <use xlinkHref="#bootstrap"></use>
           </svg>
           <span className="fs-4 text-white">
-            <b>CHAUHAN...</b>
+            <b>CHAUHAN</b>
+            <IoReorderThreeSharp size={40} />
           </span>
         </a>
         <hr className="text-white" />
@@ -33,6 +36,7 @@ const Sidebar = () => {
               <svg className="bi me-2" width="16" height="16">
                 <use xlinkHref="#speedometer2"></use>
               </svg>
+              <MdDashboard size={25} style={{ marginRight: "10px" }} />
               Dashboard
             </a>
           </li>

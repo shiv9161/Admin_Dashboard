@@ -1,6 +1,15 @@
 import React from "react";
 import { MdDashboard } from "react-icons/md";
 import { IoReorderThreeSharp } from "react-icons/io5";
+import { FaBorderTopLeft } from "react-icons/fa6";
+import { IoHomeSharp } from "react-icons/io5";
+import { MdOutlineProductionQuantityLimits } from "react-icons/md";
+import { PiChalkboardTeacherFill } from "react-icons/pi";
+import { IoLibrary } from "react-icons/io5";
+import { FaCar } from "react-icons/fa6";
+import { FaTableList } from "react-icons/fa6";
+import { GrTransaction } from "react-icons/gr";
+import { FcDepartment } from "react-icons/fc";
 
 const Sidebar = () => {
   return (
@@ -28,6 +37,7 @@ const Sidebar = () => {
               <svg className="bi me-2" width="16" height="20">
                 <use xlinkHref="#home"></use>
               </svg>
+              <IoHomeSharp size={25} style={{ marginRight: "10px" }} />
               Home
             </a>
           </li>
@@ -45,6 +55,7 @@ const Sidebar = () => {
               <svg className="bi me-2" width="16" height="16">
                 <use xlinkHref="#table"></use>
               </svg>
+              <FaBorderTopLeft size={25} style={{ marginRight: "10px" }} />
               Orders
             </a>
           </li>
@@ -53,6 +64,10 @@ const Sidebar = () => {
               <svg className="bi me-2" width="16" height="16">
                 <use xlinkHref="#grid"></use>
               </svg>
+              <MdOutlineProductionQuantityLimits
+                size={25}
+                style={{ marginRight: "10px" }}
+              />
               Products
             </a>
           </li>
@@ -61,6 +76,10 @@ const Sidebar = () => {
               <svg className="bi me-2" width="16" height="16">
                 <use xlinkHref="#grid"></use>
               </svg>
+              <PiChalkboardTeacherFill
+                size={25}
+                style={{ marginRight: "10px" }}
+              />
               All Teacher
             </a>
           </li>
@@ -69,6 +88,7 @@ const Sidebar = () => {
               <svg className="bi me-2" width="16" height="16">
                 <use xlinkHref="#grid"></use>
               </svg>
+              <IoLibrary size={25} style={{ marginRight: "10px" }} />
               Library
             </a>
           </li>
@@ -77,6 +97,7 @@ const Sidebar = () => {
               <svg className="bi me-2" width="16" height="16">
                 <use xlinkHref="#grid"></use>
               </svg>
+              <FaCar size={25} style={{ marginRight: "10px" }} />
               Driver Journey
             </a>
           </li>
@@ -85,6 +106,7 @@ const Sidebar = () => {
               <svg className="bi me-2" width="16" height="16">
                 <use xlinkHref="#grid"></use>
               </svg>
+              <FaTableList size={25} style={{ marginRight: "10px" }} />
               All Tables
             </a>
           </li>
@@ -93,6 +115,7 @@ const Sidebar = () => {
               <svg className="bi me-2" width="16" height="16">
                 <use xlinkHref="#grid"></use>
               </svg>
+              <GrTransaction size={25} style={{ marginRight: "10px" }} />
               Transactions
             </a>
           </li>
@@ -101,6 +124,7 @@ const Sidebar = () => {
               <svg className="bi me-2" width="16" height="16">
                 <use xlinkHref="#grid"></use>
               </svg>
+              <FcDepartment size={25} style={{ marginRight: "10px" }} />
               Department
             </a>
           </li>

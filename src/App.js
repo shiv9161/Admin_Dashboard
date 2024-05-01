@@ -8,10 +8,10 @@ const App = () => {
     <>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-sm-2">
+          <div className="col-2" style={{ padding: " 0 0" }}>
             <Sidebar />
           </div>
-          <div className="col-sm-10">
+          <div className="col-10">
             <Navbar />
             <Table />
           </div>

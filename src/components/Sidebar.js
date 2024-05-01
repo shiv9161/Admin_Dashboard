@@ -4,8 +4,8 @@ const Sidebar = () => {
   return (
     <>
       <div
-        className="d-flex flex-column flex-shrink-0 p-3 bg-light"
-        style={{ width: "245px" }}
+        className="d-flex flex-column flex-shrink-0 p-3 bg-primary"
+        style={{ width: "245px", height: "730px" }}
       >
         <a
           href="/"
@@ -14,20 +14,22 @@ const Sidebar = () => {
           <svg className="bi me-2" width="40" height="32">
             <use xlinkHref="#bootstrap"></use>
           </svg>
-          <span className="fs-4">Sidebar</span>
+          <span className="fs-4 text-white">
+            <b>CHAUHAN...</b>
+          </span>
         </a>
-        <hr />
-        <ul className="nav nav-pills flex-column mb-auto">
+        <hr className="text-white" />
+        <ul className="nav nav-pills flex-column mb-auto pb-3">
           <li className="nav-item">
             <a href="/" className="nav-link active" aria-current="page">
-              <svg className="bi me-2" width="16" height="16">
+              <svg className="bi me-2" width="16" height="20">
                 <use xlinkHref="#home"></use>
               </svg>
               Home
             </a>
           </li>
           <li>
-            <a href="/" className="nav-link link-dark">
+            <a href="/" className="nav-link link-dark text-white p-3">
               <svg className="bi me-2" width="16" height="16">
                 <use xlinkHref="#speedometer2"></use>
               </svg>
@@ -35,7 +37,7 @@ const Sidebar = () => {
             </a>
           </li>
           <li>
-            <a href="/" className="nav-link link-dark">
+            <a href="/" className="nav-link link-dark text-white p-3">
               <svg className="bi me-2" width="16" height="16">
                 <use xlinkHref="#table"></use>
               </svg>
@@ -43,7 +45,7 @@ const Sidebar = () => {
             </a>
           </li>
           <li>
-            <a href="/" className="nav-link link-dark">
+            <a href="/" className="nav-link link-dark text-white p-3">
               <svg className="bi me-2" width="16" height="16">
                 <use xlinkHref="#grid"></use>
               </svg>
@@ -51,87 +53,55 @@ const Sidebar = () => {
             </a>
           </li>
           <li>
-            <a href="/" className="nav-link link-dark">
+            <a href="/" className="nav-link link-dark text-white p-3">
               <svg className="bi me-2" width="16" height="16">
                 <use xlinkHref="#grid"></use>
               </svg>
-              Products
+              All Teacher
             </a>
           </li>
           <li>
-            <a href="/" className="nav-link link-dark">
+            <a href="/" className="nav-link link-dark text-white p-3">
               <svg className="bi me-2" width="16" height="16">
                 <use xlinkHref="#grid"></use>
               </svg>
-              Products
-            </a>
-          </li>{" "}
-          <li>
-            <a href="/" className="nav-link link-dark">
-              <svg className="bi me-2" width="16" height="16">
-                <use xlinkHref="#grid"></use>
-              </svg>
-              Products
+              Library
             </a>
           </li>
           <li>
-            <a href="/" className="nav-link link-dark">
+            <a href="/" className="nav-link link-dark text-white p-3">
               <svg className="bi me-2" width="16" height="16">
                 <use xlinkHref="#grid"></use>
               </svg>
-              Products
+              Driver Journey
             </a>
           </li>
           <li>
-            <a href="/" className="nav-link link-dark">
+            <a href="/" className="nav-link link-dark text-white p-3">
               <svg className="bi me-2" width="16" height="16">
                 <use xlinkHref="#grid"></use>
               </svg>
-              Products
+              All Tables
             </a>
           </li>
           <li>
-            <a href="/" className="nav-link link-dark">
+            <a href="/" className="nav-link link-dark text-white p-3">
               <svg className="bi me-2" width="16" height="16">
                 <use xlinkHref="#grid"></use>
               </svg>
-              Products
+              Transactions
             </a>
           </li>
           <li>
-            <a href="/" className="nav-link link-dark">
+            <a href="/" className="nav-link link-dark text-white p-3">
               <svg className="bi me-2" width="16" height="16">
                 <use xlinkHref="#grid"></use>
               </svg>
-              Products
-            </a>
-          </li>
-          <li>
-            <a href="/" className="nav-link link-dark">
-              <svg className="bi me-2" width="16" height="16">
-                <use xlinkHref="#grid"></use>
-              </svg>
-              Products
-            </a>
-          </li>
-          <li>
-            <a href="/" className="nav-link link-dark">
-              <svg className="bi me-2" width="16" height="16">
-                <use xlinkHref="#grid"></use>
-              </svg>
-              Products
-            </a>
-          </li>
-          <li>
-            <a href="/" className="nav-link link-dark">
-              <svg className="bi me-2" width="16" height="16">
-                <use xlinkHref="#people-circle"></use>
-              </svg>
-              Customers
+              Department
             </a>
           </li>
         </ul>
-        <hr />
+        <hr className="text-white" />
         <div className="dropdown">
           <a
             href="/"
@@ -145,9 +115,9 @@ const Sidebar = () => {
               alt=""
               width="32"
               height="32"
-              className="rounded-circle me-2"
+              className="rounded-circle me-2 "
             />
-            <strong>mdo</strong>
+            <strong className="text-white">mdo</strong>
           </a>
           <ul
             className="dropdown-menu text-small shadow"
